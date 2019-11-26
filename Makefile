@@ -15,7 +15,7 @@ OUTPUT=lib$(NAME).so
 all: $(OUTPUT)
 
 $(OUTPUT): $(SOURCES) $(HEADERS)
-	$(CC) -shared $(CXXFLAGS) -o $(OUTPUT) $(SOURCES)
+	$(CC) -shared -lao $(CXXFLAGS) -o $(OUTPUT) $(SOURCES)
 
 clean:
 	rm -f *.o *.so
